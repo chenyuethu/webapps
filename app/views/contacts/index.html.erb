@@ -8,7 +8,11 @@ contacts = Contact.all
     <li> 
     <%= contact["first_name"] %> <%= contact["last_name"] %> - 
     <%= contact["email"] %> - <%= contact["phone_number"] %> -
-    <%= contact["company_id"] %>
+    <%
+    contact_company = Company.find_by({"id" => contact["company_id"]})
+    contact_company_name = contact_company["name"]
+    %>
+    <%= contact_company["name"]%>
 
     </li>
     <%end%>
