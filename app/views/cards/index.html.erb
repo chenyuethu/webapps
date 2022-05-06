@@ -21,14 +21,16 @@ shuffled_deck = deck.shuffle
 hand = shuffled_deck[0,5]
 %>
 
-<%for card in hand%>
-  <p> <%= card %> </p>
-<%end%>
-
 
 <%for card in hand%>
-  <p> <img src="/images/cards/<%=card%>.svg/"> </p>
+  <p><%= card %></p>
 <%end%>
+
+<p>
+<%for card in hand%>
+   <img src="/images/cards/<%=card%>.svg/"> 
+<%end%>
+</p>
 
 <p>
 <a href="/cards">Play Again </a>
