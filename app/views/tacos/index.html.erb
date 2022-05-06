@@ -1,5 +1,11 @@
+<% 
+fillings = ["Acrnitas","Al Pastor", "Carne Asada"]
+%>     
+
+
 <h1>Tacos!!!</h1>
 <ul>
-    <li>Carnitas</li>
-    <li>Al Pastor</li>
+    <% for filling in fillings %>
+    <li> <%= filling %> </li>
+    <%end%>
 </ul>
