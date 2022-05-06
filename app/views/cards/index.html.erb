@@ -10,7 +10,7 @@ suits = ["Clubs", "Diamonds", "Hearts", "Spades"]
 <%
 for rank in ranks
   for suit in suits
-    card = "#{rank} of #{suit}"
+    card = "#{rank}_of_#{suit}"
     deck.push(card)
   end
   end
@@ -25,6 +25,10 @@ hand = shuffled_deck[0,5]
   <p> <%= card %> </p>
 <%end%>
 
+
+<%for card in hand%>
+  <p> <img src="/images/cards/<%=card%>.svg/"> </p>
+<%end%>
 
 <p>
 <a href="/cards">Play Again </a>
